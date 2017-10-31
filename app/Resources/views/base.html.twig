@@ -11,6 +11,8 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}
+            <script src="{{ asset('manifest.js') }}"></script>
+            <script src="{{ asset('vendor.js') }}"></script>
             <script src="{{ asset('index.js') }}"></script>
         {% endblock %}
     </body>

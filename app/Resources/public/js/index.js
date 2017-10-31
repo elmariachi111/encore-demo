@@ -2,13 +2,18 @@ import _ from 'lodash';
 
 import '../scss/main.scss';
 
-function component() {
-    const helloWorld = _.join(['Bulma', 'CSS', 'Framework'], ' ');
-    $('section p.subtitle .framework').html(helloWorld);
+import {fetchJson} from './remote.js';
+
+function showFramework() {
+    const frameworkName = _.join(['Bulma', 'io'], '.');
+    $('#framework').html(frameworkName);
 }
 
 $(() => {
-    component();
+    showFramework();
+    fetchJson('/api/fortune').then(text => {
+        $('#fortune').html(text);
+    });
 })
 
 
