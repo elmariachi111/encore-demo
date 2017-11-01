@@ -9,7 +9,10 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        <div id="root">
         {% block body %}{% endblock %}
+        </div>
+        
         {% block javascripts %}
             <script src="{{ asset('manifest.js') }}"></script>
             <script src="{{ asset('vendor.js') }}"></script>

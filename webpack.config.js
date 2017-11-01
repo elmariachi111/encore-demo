@@ -15,8 +15,9 @@ Encore
         jQuery: 'cash-dom',
         'window.jQuery': 'cash-dom',
     })
-    .addEntry('index', './app/Resources/public/js/index.js')
+    .addEntry('index', './app/Resources/public/js/index.jsx')
     .enableSourceMaps(!Encore.isProduction())
+    .enableReactPreset()
     .configureBabel(babelConfig => {
         babelConfig.presets.push('es2017');
     })
