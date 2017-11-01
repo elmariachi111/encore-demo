@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "encore production",
-    "watch": "encore dev --watch"
+    "watch": "encore dev --watch",
+    "dev-server": "encore dev-server"
   },
   "author": "",
   "license": "ISC",
