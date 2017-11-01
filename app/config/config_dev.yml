@@ -8,7 +8,7 @@ framework:
     profiler: { only_exceptions: false }
     assets:
       base_urls:
-        - "http://localhost:8081/dist"
+        - "http://localhost:8080/dist"
 
 
 web_profiler:
