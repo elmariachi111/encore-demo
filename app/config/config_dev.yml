@@ -7,9 +7,9 @@ framework:
         strict_requirements: true
     profiler: { only_exceptions: false }
     assets:
+      #base_path: "/dist" #use this when producing assets inline
       base_urls:
-        - "http://localhost:8081/dist"
-
+        - "http://localhost:8080/dist" #use this when using webpack dev server
 
 web_profiler:
     toolbar: true
