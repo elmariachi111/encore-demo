@@ -7,7 +7,9 @@ framework:
         strict_requirements: true
     profiler: { only_exceptions: false }
     assets:
-      #base_path: "/dist" #use this when producing assets inline
+        #use this when producing assets inline
+        #json_manifest_path: "%kernel.project_dir%/web/dist/manifest.json"
+        #base_path: "/dist"
       base_urls:
         - "http://localhost:8080/dist" #use this when using webpack dev server
 
