@@ -1,14 +1,18 @@
 import _ from "lodash";
-import "bulma/css/bulma.css";
-import "font-awesome/css/font-awesome.css";
 
-import "../scss/simple.css";
+import "../scss/main.scss";
 
 function component() {
-  const helloWorld = _.join(["Bulma.io", "CSS", "Framework"], " ");
-  const elem = document.querySelector("section p.subtitle .framework");
-
-  elem.innerHTML = helloWorld;
+  const helloWorld = _.join(["Bulma", "CSS", "Framework"], " ");
+  $("section p.subtitle .framework").html(helloWorld);
 }
 
-window.setTimeout(component, 2000);
+$(() => {
+  window.setTimeout(component, 2000);
+});
+
+if (module.hot) {
+  module.hot.accept("./index.js", function() {
+    console.log("Accepting the updated index module!");
+  });
+}
