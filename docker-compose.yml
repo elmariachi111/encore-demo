@@ -1,0 +1,17 @@
+version: "3.2"
+
+services:
+  php:
+    build: ./docker/php
+    volumes:
+      - .:/var/www/symfony
+      - ./var/logs:/var/www/symfony/var/logs
+  nginx:
+    build: ./docker/nginx
+    ports:
+      - 80:80
+    depends_on:
+      - php
+    volumes:
+      - .:/var/www/symfony:cached
+      - ./var/logs/nginx:/var/log/nginx:delegated
