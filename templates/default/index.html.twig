@@ -1,14 +1,35 @@
 {% extends 'base.html.twig' %}
 
+{% block hero_body %}
+    <h1 class="title">
+        Hero title
+    </h1>
+
+    <p class="subtitle">
+        My first website with
+        <i class="fa fa-music"></i>
+        <strong class="framework">Bootstrap</strong>!
+    </p>
+{% endblock %}
+
 {% block body %}
-    <section class="section">
+    <section>
         <div class="container">
-            <h1 class="title">
-                Hello World
-            </h1>
-            <p class="subtitle">
-                My first website with <i class="fa fa-music"></i> <strong class="framework">Bootstrap</strong>!
-            </p>
+            <div class="tile is-ancestor">
+                <div class="tile is-4 is-vertical is-parent">
+                    <div class="tile is-child box">
+                        <p class="title">One</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <p class="title">Two</p>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title">Three</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock %}

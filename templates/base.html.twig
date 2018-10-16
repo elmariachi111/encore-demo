@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="UTF-8"/>
+        <title>
+            {% block title %}Welcome!{% endblock %}
+        </title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     </head>
     <body>
+        {% block hero %}
+            <section class="hero is-primary">
+                <div class="hero-body">
+                    <div class="container">
+                        {% block hero_body %}{% endblock %}
+                    </div>
+                </div>
+            </section>
+        {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}
             <script src="dist/bundle.js"></script>
