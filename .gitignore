@@ -25,7 +25,7 @@
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 
-/web/dist/
+/public/dist/
 
 ### Node template
 # Logs
