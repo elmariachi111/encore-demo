@@ -10,8 +10,8 @@ module.exports = merge(common, {
   //devtool: "source-map",
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: "[name].[hash].css",
+      chunkFilename: "[id].[hash].css"
     })
   ],
   optimization: {
@@ -22,7 +22,17 @@ module.exports = merge(common, {
         sourceMap: false // set to true if you want JS source maps
       }),
       new OptimizeCssAssetsPlugin({})
-    ]
+    ],
+    runtimeChunk: "single",
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all"
+        }
+      }
+    }
   },
   module: {
     rules: [

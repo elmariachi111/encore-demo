@@ -14,13 +14,15 @@ module.exports = {
     index: "./assets/js/index.js"
   },
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[hash].js",
     publicPath: "/dist/",
     path: path.resolve(__dirname, "public/dist")
   },
   plugins: [
     new CleanWebpackPlugin(["public/dist"]),
-    new ManifestPlugin(),
+    new ManifestPlugin({
+      writeToFileEmit: true
+    }),
     provide
   ],
   module: {

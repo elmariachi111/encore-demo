@@ -22,7 +22,9 @@
         {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script src="{{ asset('index.bundle.js') }}"></script>
+            <script src="{{ asset('runtime.js') }}"></script>
+            <script src="{{ asset('vendors.js') }}"></script>
+            <script src="{{ asset('index.js') }}"></script>
         {% endblock %}
     </body>
 </html>
