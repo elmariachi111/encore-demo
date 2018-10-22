@@ -13,6 +13,6 @@ $(() => {
 
 if (module.hot) {
   module.hot.accept("./index.js", function() {
-    console.log("Accepting the updated index module!");
+    console.log("Accepting the updated index module! ");
   });
 }
