@@ -84,3 +84,10 @@ typings/
 # dotenv environment variables file
 .env
 .vscode
+
+###> symfony/webpack-encore-pack ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-pack ###

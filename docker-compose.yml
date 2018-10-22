@@ -4,7 +4,7 @@ services:
   php:
     build: ./docker/php
     volumes:
-      - .:/var/www/symfony
+      - .:/var/www/symfony:delegated
       - ./var/logs:/var/www/symfony/var/logs
   nginx:
     build: ./docker/nginx

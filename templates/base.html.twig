@@ -6,7 +6,7 @@
             {% block title %}Welcome!{% endblock %}
         </title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('index.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('dist/index.css') }}"/>
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     </head>
@@ -22,9 +22,8 @@
         {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script src="{{ asset('runtime.js') }}"></script>
-            <script src="{{ asset('vendors.js') }}"></script>
-            <script src="{{ asset('index.js') }}"></script>
+            <script src="{{ asset('dist/runtime.js') }}"></script>
+            <script src="{{ asset('dist/index.js') }}"></script>
         {% endblock %}
     </body>
 </html>
