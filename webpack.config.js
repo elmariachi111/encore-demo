@@ -5,7 +5,6 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 Encore.setOutputPath("public/dist/")
   .setPublicPath("/dist")
   .addEntry("index", "./assets/js/index.js")
-  .createSharedEntry("vendor", "./assets/js/vendor.js")
   .cleanupOutputBeforeBuild()
   .enableBuildNotifications()
   .enableSourceMaps(!Encore.isProduction())
@@ -24,4 +23,10 @@ Encore.setOutputPath("public/dist/")
       generateStatsFile: true
     })
   );
+
+if (Encore.isProduction()) {
+  //will be replaced by .splitEntryChunks()
+  Encore.createSharedEntry("vendor", "./assets/js/vendor.js");
+}
+
 module.exports = Encore.getWebpackConfig();

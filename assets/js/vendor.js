@@ -1,1 +1,1 @@
-import $ from "cash-dom";
+require("cash-dom");

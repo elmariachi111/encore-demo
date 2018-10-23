@@ -4,7 +4,7 @@ import $ from "cash-dom";
 import "../scss/main.scss";
 
 function component() {
-  const helloWorld = _join(["Bulma", "CSS", "Framework", "yes"], " ");
+  const helloWorld = _join(["Bulma", "CSS", "Framework"], " ");
   $("section p.subtitle .framework").html(helloWorld);
   $("p.subtitle i.fa")
     .removeClass("fa-music")
