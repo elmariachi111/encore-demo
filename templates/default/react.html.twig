@@ -1,0 +1,16 @@
+{% extends 'default/index.html.twig' %}
+
+{% block body %}
+<section>
+    <div class="container">
+        <div id="react-entry">
+        <!-- everything in here is handled by React -->
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script src="{{ asset('dist/index-react.js') }}"></script>
+{% endblock %}
