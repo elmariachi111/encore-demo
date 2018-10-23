@@ -1,8 +1,10 @@
-import _ from "lodash";
+import { join as _join } from "lodash-es";
+import $ from "cash-dom";
+
 import "../scss/main.scss";
 
 function component() {
-  const helloWorld = _.join(["Bulma", "CSS", "Framework"], " ");
+  const helloWorld = _join(["Bulma", "CSS", "Framework", "yes"], " ");
   $("section p.subtitle .framework").html(helloWorld);
   $("p.subtitle i.fa")
     .removeClass("fa-music")
