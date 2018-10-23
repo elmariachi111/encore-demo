@@ -1,0 +1,17 @@
+{% extends 'default/index.html.twig' %}
+
+{% block body %}
+<section>
+    <div class="container">
+        <div id="vue-entry">
+        <!-- everything in here is handled by Vue -->
+        <like-button />
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script src="{{ asset('dist/index-vue.js') }}"></script>
+{% endblock %}

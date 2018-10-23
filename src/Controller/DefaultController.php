@@ -27,4 +27,12 @@ class DefaultController extends Controller
         ]);
     }
 
+     /**
+     * @Route("/vue", name="vue")
+     */
+    public function vueAction()
+    {
+        return $this->render('default/vue.html.twig', [
+        ]);
+    }
 }

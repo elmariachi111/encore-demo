@@ -14,6 +14,9 @@
     "node-sass": "^4.9.4",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-notifier": "^1.6.0"
   },
