@@ -7,9 +7,14 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+    {% block header %}
+        {% include "header.twig" %}
+    {% endblock %}
+    <div class="container">
         {% block body %}{% endblock %}
+    </div>
         {% block javascripts %}
-            <script src="dist/bundle.js"></script>
+            <script src="/dist/bundle.js"></script>
         {% endblock %}
     </body>
 </html>

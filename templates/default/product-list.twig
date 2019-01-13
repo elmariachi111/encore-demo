@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="columns">
+    <div class="column is-one-quarter">
+        {% include "default/departments.twig" %}
+    </div>
+    <div class="column is-three-quarters">
+        <div class="columns is-multiline">
+        {% for p in products %}
+            <div class="column is-half">
+            {% include "default/product.twig" with {product: p} %}
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

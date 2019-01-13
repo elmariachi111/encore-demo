@@ -1,7 +1,15 @@
 const path = require("path");
+const webpack = require("webpack");
+
+const provide = new webpack.ProvidePlugin({
+  $: "jquery",
+  jQuery: "jquery"
+});
 
 module.exports = {
-  entry: "./assets/js/index.js",
+  entry: {
+    "products": "./assets/js/products.js"
+  },
   output: {
     filename: "bundle.js",
     publicPath: "/dist/",

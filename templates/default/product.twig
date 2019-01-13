@@ -1,0 +1,25 @@
+<div class="product card">
+    <header class="card-header">
+        <p class="card-header-title">{{ product.title }}</p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+            {{ product.department}}
+        </a>
+    </header>
+
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="{{ product.image }}" alt="{{ product.title }}">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="content">
+            {{ product.description }}
+            <br>
+            <p>&euro; {{ product.price }}</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <div class="card-footer-item"><strong>&euro; {{ product.price }}</strong></div>
+        <a href="{{ path("checkout", {productId: product.id}) }}" class="card-footer-item">Buy</a>
+    </footer>
+</div>

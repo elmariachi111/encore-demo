@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="columns">
+        <div class="column is-10 is-offset-1">
+            <div class="columns">
+
+                <div class="column">
+                    <h1 class="is-size-3">
+                    Lets buy {{ product.title }}
+                    </h1>
+                    <form>
+                        {% include 'default/checkout-form.twig' %}
+                    </form>
+                </div>
+
+                <div class="column is-one-third">
+                    {% include "default/product.twig" %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
