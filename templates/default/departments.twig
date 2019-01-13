@@ -3,9 +3,9 @@
         Departments
     </p>
     <ul class="menu-list">
-        <li><a href="#">All</a></li>
+        <li ><a href="#all" id="dpt-all" class="is-active">All</a></li>
         {% for d in departments %}
-        <li><a href="#{{ d }}">{{ d }}</a></li>
+        <li ><a href="#{{ d }}" id="dpt-{{ d }}">{{ d }}</a></li>
         {% endfor %}
     </ul>
 

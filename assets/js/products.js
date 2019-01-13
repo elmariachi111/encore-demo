@@ -9,7 +9,7 @@ var jquery = require('jquery');
 
 function filterDepartment(dpt) {
 
-    if (dpt === '') {
+    if (dpt === 'all') {
       jquery('#product-list .column').removeClass('is-hidden');
     } else {
       jquery('#product-list .product').each(function(idx,product) {
@@ -24,12 +24,18 @@ function filterDepartment(dpt) {
     }
 }
 
+function activateDepartmentMenu(dpt) {
+  jquery('#department-chooser .menu-list a').removeClass('is-active');
+  jquery('#department-chooser .menu-list a#dpt-' + dpt).addClass('is-active');
+}
+
 (function departmentFilter() {
   jquery('#department-chooser .menu-list a,.product.card .card-header a').on('click', function(a) {
     a.preventDefault();
     var dpt = $(a.currentTarget).attr('href').substr(1);
     filterDepartment(dpt);
+    activateDepartmentMenu(dpt);
     return false
   })
-})()
+})();
 

@@ -20,6 +20,7 @@
     </div>
     <footer class="card-footer">
         <div class="card-footer-item"><strong>&euro; {{ product.price }}</strong></div>
-        <a href="{{ path("checkout", {productId: product.id}) }}" class="card-footer-item">Buy</a>
+        <a href="{{ path("checkout", {productId: product.id}) }}" class="card-footer-item">
+            <i class="fas fa-shopping-cart"></i>&nbsp; Buy</a>
     </footer>
 </div>
