@@ -1,10 +1,11 @@
-<aside class="menu">
+<aside class="menu" id="department-chooser">
     <p class="menu-label">
         Departments
     </p>
     <ul class="menu-list">
+        <li><a href="#">All</a></li>
         {% for d in departments %}
-        <li><a>{{ d }}</a></li>
+        <li><a href="#{{ d }}">{{ d }}</a></li>
         {% endfor %}
     </ul>
 

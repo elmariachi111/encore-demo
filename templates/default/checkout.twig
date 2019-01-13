@@ -9,9 +9,9 @@
                     <h1 class="is-size-3">
                     Lets buy {{ product.title }}
                     </h1>
-                    <form>
-                        {% include 'default/checkout-form.twig' %}
-                    </form>
+
+                    {% include 'default/checkout-form.twig' %}
+
                 </div>
 
                 <div class="column is-one-third">
@@ -21,4 +21,8 @@
 
         </div>
     </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/dist/checkout.js"></script>
 {% endblock %}

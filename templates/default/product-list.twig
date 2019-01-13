@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="columns">
+<div class="columns" id="product-list">
     <div class="column is-one-quarter">
         {% include "default/departments.twig" %}
     </div>
@@ -17,4 +17,8 @@
 
 </div>
 
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/dist/products.js"></script>
 {% endblock %}

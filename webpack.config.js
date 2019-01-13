@@ -3,18 +3,25 @@ const webpack = require("webpack");
 
 const provide = new webpack.ProvidePlugin({
   $: "jquery",
-  jQuery: "jquery"
+  jQuery: "jquery",
+  'window.jQuery': 'jquery'
 });
 
 module.exports = {
+  devtool: "sourcemap",
   entry: {
-    "products": "./assets/js/products.js"
+    "products": "./assets/js/products.js",
+    "checkout": "./assets/js/checkout.js",
   },
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
     publicPath: "/dist/",
     path: path.resolve(__dirname, "public/dist")
   },
+  plugins: [
+    provide
+  ],
+
   module: {
     rules: [
       {

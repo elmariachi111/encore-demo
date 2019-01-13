@@ -1,13 +1,35 @@
 import _ from "lodash";
 
 import "bulma/css/bulma.css";
-import "font-awesome/css/font-awesome.css";
+import '@fortawesome/fontawesome-free/css/all.css';
+
 import "../css/simple.css";
 
-function component() {
-  const helloWorld = _.join(["Bulma test", "CSS", "Framework"], " ");
-  const elem = document.querySelector("section p.subtitle .framework");
+var jquery = require('jquery');
 
-  elem.innerHTML = helloWorld;
+function filterDepartment(dpt) {
+
+    if (dpt === '') {
+      jquery('#product-list .column').removeClass('is-hidden');
+    } else {
+      jquery('#product-list .product').each(function(idx,product) {
+        var $product = $(product);
+        var $column = $(product).parent(".column");
+        if ($product.data('department') === dpt) {
+          $column.removeClass('is-hidden')
+        } else {
+          $column.addClass('is-hidden')
+        }
+      })
+    }
 }
-window.setTimeout(component, 2000);
+
+(function departmentFilter() {
+  jquery('#department-chooser .menu-list a,.product.card .card-header a').on('click', function(a) {
+    a.preventDefault();
+    var dpt = $(a.currentTarget).attr('href').substr(1);
+    filterDepartment(dpt);
+    return false
+  })
+})()
+
