@@ -24,5 +24,6 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="/dist/checkout.js"></script>
+    {{ parent() }}
+    <script src="{{ asset('checkout.js') }}"></script>
 {% endblock %}

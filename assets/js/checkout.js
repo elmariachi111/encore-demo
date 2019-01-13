@@ -1,8 +1,7 @@
-import _ from "lodash";
-
-import "bulma/css/bulma.css";
-import '@fortawesome/fontawesome-free/css/all.css';
+import _ from "lodash-es";
 import validator from 'email-validator';
+
+import "../scss/common.scss";
 
 import Vue from 'vue/dist/vue.esm.js';
 
