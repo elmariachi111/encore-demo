@@ -37,10 +37,5 @@ RUN echo 'alias sf="php bin/console"' >> ~/.bashrc \
     && echo 'alias ll="ls -la"' >> /etc/bash.bashrc \
     && echo 'alias ..="cd .."' >> /etc/bash.bashrc
 
-ENV PHP_IDE_CONFIG "serverName=symfony.local"
-ENV XDEBUG_CONFIG "idekey=PHPSTORM"
-
-RUN pecl install xdebug-2.6.0 && docker-php-ext-enable xdebug
-
 WORKDIR /var/www/symfony
 EXPOSE 9000
