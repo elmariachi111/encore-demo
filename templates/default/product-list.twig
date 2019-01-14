@@ -21,10 +21,10 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('products.css') }}"/>
+    {{ encore_entry_link_tags('products') }}
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{ asset('products.js') }}"></script>
+    {{ encore_entry_script_tags('products') }}
 {% endblock %}

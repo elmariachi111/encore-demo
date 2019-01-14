@@ -23,7 +23,12 @@
     </div>
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('checkout') }}
+{% endblock %}
+
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{ asset('checkout.js') }}"></script>
+    {{ encore_entry_script_tags('checkout') }}
 {% endblock %}
