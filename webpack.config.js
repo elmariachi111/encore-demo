@@ -14,6 +14,7 @@ Encore
     .enableSassLoader()
     .splitEntryChunks()
     .autoProvidejQuery()
+    .enableVueLoader()
    // .addPlugin(new BundleAnalyzerPlugin())
 ;
 
