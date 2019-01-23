@@ -1,4 +1,5 @@
 var Encore = require('@symfony/webpack-encore');
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 Encore
     .setOutputPath('public/dist/')
@@ -12,6 +13,7 @@ Encore
     .enableSassLoader()
     .splitEntryChunks()
     .autoProvidejQuery()
+   // .addPlugin(new BundleAnalyzerPlugin())
 ;
 
 module.exports = Encore.getWebpackConfig();
