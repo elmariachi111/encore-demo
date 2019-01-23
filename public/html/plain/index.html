@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>the way before</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Welcome to the stone age</h1>
+            <div class="row">
+                <div class="col-sm">
+                    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+
+                    <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Modal body text goes here.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm">
+                    and Fontawesome!
+                    <i class="fab fa-php fa-spin fa-4x"></i>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="owl-carousel">
+                        <div> <img src="https://picsum.photos/400/400/?image=1" style="height:400px"> </div>
+                        <div> <img src="https://picsum.photos/400/400/?image=2" style="height:400px"> </div>
+                        <div> <img src="https://picsum.photos/400/400/?image=3" style="height:400px"> </div>
+                        <div> <img src="https://picsum.photos/400/400/?image=4" style="height:400px"> </div>
+                        <div> <img src="https://picsum.photos/400/400/?image=5" style="height:400px"> </div>
+                        <div> <img src="https://picsum.photos/400/400/?image=6" style="height:400px"> </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
+        <!--bootstrap dependencies-->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <!--owl carousel-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <!--mousewheel-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+        <script>
+            $(function () {
+                $('[data-toggle=popover]').popover({
+                    container: 'body'
+                })
+            });
+
+            $(function() {
+                var owl = $(".owl-carousel");
+                owl.owlCarousel({
+                    loop:true,
+                    nav:true,
+                    margin:10
+                });
+                owl.on('mousewheel', '.owl-stage', function (e) {
+                    if (e.deltaY>0) {
+                        owl.trigger('next.owl');
+                    } else {
+                        owl.trigger('prev.owl');
+                    }
+                    e.preventDefault();
+                });
+            })
+        </script>
+    </body>
+</html>
