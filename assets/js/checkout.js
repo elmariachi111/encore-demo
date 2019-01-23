@@ -2,6 +2,7 @@ import _ from "lodash";
 
 import "bulma/css/bulma.css";
 import '@fortawesome/fontawesome-free/css/all.css';
+import validator from 'email-validator';
 
 import Vue from 'vue/dist/vue.esm.js';
 
@@ -26,7 +27,7 @@ var app = new Vue({
     },
     computed: {
         emailValid: function() {
-            return (this.email.indexOf('@') > 0);
+            return (validator.validate(this.email));
         },
         submittable: function() {
             return (
