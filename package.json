@@ -6,7 +6,9 @@
   "directories": {
     "test": "tests"
   },
-  "sideEffects": ["*.scss"],
+  "sideEffects": [
+    "*.scss"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
