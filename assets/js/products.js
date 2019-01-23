@@ -1,6 +1,5 @@
 import {sortBy as _sortBy} from "lodash-es";
 
-import "../scss/common.scss";
 import "../scss/products.scss";
 
 import jquery from 'jquery';

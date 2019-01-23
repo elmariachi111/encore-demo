@@ -4,6 +4,7 @@ var Encore = require('@symfony/webpack-encore');
 Encore
     .setOutputPath('public/dist/')
     .setPublicPath('/dist')
+    .addStyleEntry('common', './assets/scss/_common.scss')
     .addEntry('products', './assets/js/products.js')
     .addEntry('checkout', './assets/js/checkout.js')
     .enableSingleRuntimeChunk()

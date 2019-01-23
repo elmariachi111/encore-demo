@@ -1,6 +1,6 @@
 import validator from 'email-validator';
 
-import "../scss/common.scss";
+import "../scss/checkout.scss";
 
 import Vue from 'vue/dist/vue.esm.js';
 
