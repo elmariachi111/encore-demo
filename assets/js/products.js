@@ -1,11 +1,17 @@
-import _ from "lodash-es";
+import {sortBy as _sortBy} from "lodash-es";
 
 import "../scss/common.scss";
 import "../scss/products.scss";
 
 import jquery from 'jquery';
 
+const treeshakingDemo = arr => {
+  return _sortBy(arr => arr.idx)
+}
+
 const filterDepartment = dpt => {
+
+    treeshakingDemo([{v:'a',i:2}, {v:'b', i:1}]);
 
     if (dpt === 'all') {
       jquery('#product-list .column').removeClass('is-hidden');

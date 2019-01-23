@@ -1,4 +1,3 @@
-import _ from "lodash-es";
 import validator from 'email-validator';
 
 import "../scss/common.scss";
