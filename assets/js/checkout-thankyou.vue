@@ -29,3 +29,10 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+    .button.is-success {
+        background-color: blueviolet;
+    }
+</style>
+
