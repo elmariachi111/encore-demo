@@ -6,7 +6,10 @@
   "directories": {
     "test": "tests"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "encore production",
+    "watch": "encore dev-server --host 0.0.0.0 --disable-host-check --hot"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
