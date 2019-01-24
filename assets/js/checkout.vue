@@ -132,7 +132,7 @@ export default {
         }
     },
     props: {
-        price: Number
+        price: String
     },
     methods: {
         submit() {

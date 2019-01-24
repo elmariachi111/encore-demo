@@ -8,24 +8,35 @@
             </header>
             <section class="modal-card-body">
                 Thank you, {{ name }} for buying!
+                <Carousel v-if="carousel"></Carousel>
             </section>
             <footer class="modal-card-foot">
+                <button class="button is-info" @click.prevent="carousel = true">carousel</button>
                 <button class="button is-success" @click.prevent="$emit('dismissed')">Okay</button>
                 <button class="button">Cancel</button>
             </footer>
 
         </div>
+
         <button class="modal-close is-large" aria-label="close" @click.prevent="$emit('dismissed')"></button>
     </div>
 </template>
 
 <script>
+import Carousel from './carousel.vue';
 
 export default {
+
     name: "Thankyou",
+    components: {Carousel},
     props: {
         visible: Boolean,
         name: String
+    },
+    data() {
+        return {
+            carousel: false
+        }
     }
 }
 </script>
